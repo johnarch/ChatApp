@@ -33,13 +33,14 @@ class UserToggler extends Component {
     }
   }
 
-  render() {
-    const { activeThread, activeUser, threads, postChatMessage, users } = this.props
-    debugger
+  /**
+   * @todo clean this up - maybe change root data structure in the app state.
+   */
+  getChatParticipantDetails() {
+    const { activeThread, activeUser, threads, users } = this.props
 
     let currentThread = ''
     let chatParticipantId = ''
-    let chatParticipantDetails = {}
 
     threads.map((thread, i) => {
       if (thread.threadId === activeThread) {
@@ -52,17 +53,29 @@ class UserToggler extends Component {
     }
     chatParticipantId = currentThread.threadUsers.find(getChatParticipantId)
 
-    function getUserDetails(uId) {
+    /**
+     * of the two chat participants in this thread,
+     * get the details for the one who is not the active user
+     */
+    function getChatParticipantUserDetails(uId) {
       let userDetails = ''
       users.map((user, i) => {
         if (user.userId === uId) {
-        userDetails = user
-      }
-    })
+          userDetails = user
+        }
+      })
       return userDetails
     }
     debugger
-    chatParticipantDetails = getUserDetails(chatParticipantId)
+    return getChatParticipantUserDetails(chatParticipantId)
+  }
+
+  render() {
+    const { activeThread, activeUser, threads, postChatMessage, users } = this.props
+    debugger
+
+
+    let chatParticipantDetails = this.getChatParticipantDetails()
     let chatParticipantName = (typeof chatParticipantDetails.userName !== 'undefined')
       ? chatParticipantDetails.userName : 'Fab Four Group Chat'
 
