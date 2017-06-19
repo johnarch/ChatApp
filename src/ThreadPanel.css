@@ -1,0 +1,41 @@
+.thread-panel {
+    width: 80vw;
+    min-height: 100%;
+    display: inline-block;
+}
+
+.thread-panel-header {
+    position: fixed;
+    width: 80vw;
+    left: 20vw;
+    height: 30px;
+    text-align: left;
+    font-size: 20px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    top: 10vh;
+    padding: 10px 0px 0px 44px;
+    font-style: italic;
+}
+.thread-panel-footer {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    bottom: 0px;
+    left: 20vw;
+    background-color: #ffffff;
+}
+
+.post-message {
+    position: absolute;
+    bottom: 10px;
+    width: 70%;
+    margin: 0 auto;
+    left: 5vh;
+    height: 30px;
+    padding: 4px;
+    border: 2px solid #e0e0e0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}

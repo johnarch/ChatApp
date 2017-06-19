@@ -1,0 +1,21 @@
+.user-toggler {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    background-color: #ffffff;
+}
+
+.user-tab {
+    width: 25%;
+    display: inline-block;
+    line-height: 10vh;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ab9ba9;
+    color: #4d3946;
+}
+
+.user-tab:hover {
+    background-color: #4d3946;
+    color: #ffffff;
+}
