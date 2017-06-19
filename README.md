@@ -1,6 +1,6 @@
 This ChatApp is a simulation of a well-skinned Slack WebApp for office communication.
 It features interaction between four users (John, Paul George & Ringo) as well as a group channel.
-As an added feature is that you can simulate the experience of using each of the Beatles' Slack Accounts via
+As an added feature you can simulate the experience of using each of the Beatles' Slack Accounts via
 the navigation across the top; using this you can have John send Paul a message, and then go to Paul's account
 to read the message and respond.
 
