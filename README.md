@@ -5,7 +5,7 @@ the navigation across the top; using this you can have John send Paul a message,
 to read the message and respond.
 
 
-All state (initial & modified) is kept in the top-root parent app. The state (and key
+All state (initial & modified) is kept in the top-root parent component. The state (and key
 functions like postChatMessage()) is passed to child components as properties. I would not
 normally do this, but I found it more time-efficient then mocking api responses in a redux architecture.
 
